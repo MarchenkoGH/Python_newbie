@@ -1,10 +1,12 @@
 # VARIANT 1
 #
-# print("       *     *      * * *  *   *     ")
-# print("      * *    *      *       * *      ")
-# print("     *   *   *      * * *    *       ")
-# print("    * * * *  *   *  *       * *      ")
-# print("   *       * * * *  * * *  *   *     ")
+# print("""
+#               *     *      * * *  *   *
+#              * *    *      *       * *
+#             *   *   *      * * *    *
+#            * * * *  *   *  *       * *
+#           *       * * * *  * * *  *   *
+#       """)
 
 # VARIANT 2 - the following code is working good in Terminal only
 #
@@ -13,13 +15,15 @@
 # print(art_name)
 
 
-# print('"\\a"     Bell (alert)')
-# print('"\\b"     Backspace')
-# print('"\\n"     New line')
-# print('"\\t"     Horizontal tab')
-# print('\\\       Backslash \\')
-# print('\\”       Double quotation mark“')
-# print("\\’       Single quotation mark‘")
+# print('''
+# \\a     Bell (alert)
+# \\b     Backspace
+# \\n     New line
+# \\t     Horizontal tab
+# \\\     Backslash \\
+# \\”     Double quotation mark“
+# \\’     Single quotation mark‘
+#       ''')
 
 
 # Number1 = int(input("please insert Number 1: "))
@@ -28,3 +32,4 @@
 # print("Number 1 // Number 2 =", Number1 // Number2)
 # print("Number 1 % Number 2 =", Number1 % Number2)
 # print("Number 1 ** Number 2 =", Number1 ** Number2)
+
