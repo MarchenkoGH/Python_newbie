@@ -12,6 +12,14 @@ number = int(input("Please enter an integer number: "))
 print("The next number for the number", number, "is", number + 1)
 print("The previous number for the number", number, "is", number - 1)
 
+# Lesson 2.3
+
+x = int(input("введите год: "))
+if x % 4 != 0 or (x % 100 == 0 and x % 400 != 0):
+    print("NO")
+else:
+    print("YES")
+
 # Lesson 2.4
 
 distance = float(input("Введите расстояние трассы (км): "))
