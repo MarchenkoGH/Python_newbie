@@ -1,16 +1,21 @@
-def area_of_figure():
-    figure = int(input('Введите количество сторон фигуры (напр. 3 для треугольника и 4 для прямоугольника): '))
-    storona_1 = int(input('Введите длину стороны 1: '))
-    storona_2 = int(input('Введите длину стороны 2: '))
+def area_of_figure(a: int, b: int, figure = 'треугольник'):
     area = 0
-    if figure == 3:
+    if figure == 'треугольник':
         print('вы выбрали треугольник')
-        area = storona_1 * storona_2 * .5
-    elif figure == 4:
+        area = a * b * .5
+        return area
+    elif figure == 'треугольник':
         print('вы выбрали прямоугольник')
-        area = storona_1 * storona_2
+        area = a * b
+        return area
     else:
-        print('ERROR. Вы должны ввести число 3 или 4')
-    return area
+        return 'ERROR. Вы должны правильно написать фигуру'
 
-print('площадь фигуры равна =', area_of_figure())
+
+
+figure = (input('Выберете фигуру и введите нужное имя (треугольник или прямоугольник): '))
+a = int(input('Введите длину стороны 1: '))
+b = int(input('Введите длину стороны 2: '))
+
+
+print('его площадь равна =', area_of_figure(a, b, figure))
