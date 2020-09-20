@@ -1,1 +1,6 @@
-
+[x, y] = [int(input()), int(input())]
+days = 1
+while x < y:
+    x *= 1.1
+    days += 1
+print(days)
