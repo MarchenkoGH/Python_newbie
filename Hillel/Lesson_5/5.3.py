@@ -4,7 +4,7 @@ def area_of_figure(a: int, b: int, figure = 'треугольник'):
         print('вы выбрали треугольник')
         area = a * b * .5
         return area
-    elif figure == 'треугольник':
+    elif figure == 'прямоугольник':
         print('вы выбрали прямоугольник')
         area = a * b
         return area
