@@ -1,0 +1,6 @@
+Number1 = int(input("please insert Number 1: "))
+ Number2 = int(input("please insert Number 2: "))
+ print("Number 1 + Number 2 =", Number1 + Number2)
+ print("Number 1 // Number 2 =", Number1 // Number2)
+ print("Number 1 % Number 2 =", Number1 % Number2)
+ print("Number 1 ** Number 2 =", Number1 ** Number2)
