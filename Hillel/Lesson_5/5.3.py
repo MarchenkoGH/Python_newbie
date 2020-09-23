@@ -1,21 +1,21 @@
-def area_of_figure(a: int, b: int, figure = 'треугольник'):
+def area_of_figure(a: int, b: int, figure = 'triangle'):
     area = 0
-    if figure == 'треугольник':
-        print('вы выбрали треугольник')
+    if figure == 'triangle':
+        print('your choice is triangle')
         area = a * b * .5
         return area
-    elif figure == 'прямоугольник':
-        print('вы выбрали прямоугольник')
+    elif figure == 'rectangle':
+        print('Your choice is rectangle')
         area = a * b
         return area
     else:
-        return 'ERROR. Вы должны правильно написать фигуру'
+        return 'ERROR. You have to chooce between triangle and rectangle'
 
 
 
-figure = (input('Выберете фигуру и введите нужное имя (треугольник или прямоугольник): '))
-a = int(input('Введите длину стороны 1: '))
-b = int(input('Введите длину стороны 2: '))
+figure = (input('Please choice between triangle and rectangle and input the name accordinly): '))
+a = int(input('Please enter length of side 1: '))
+b = int(input('Please enter length of side 2: '))
 
 
-print('его площадь равна =', area_of_figure(a, b, figure))
+print('The area is = ', area_of_figure(a, b, figure))
