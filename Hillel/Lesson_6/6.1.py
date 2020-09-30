@@ -1,4 +1,4 @@
-ef common_dict():
+def common_dict():
     return {coin: code for coin, code in zip(coin, code)}
 
 
