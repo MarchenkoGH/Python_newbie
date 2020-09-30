@@ -1,4 +1,4 @@
-[x, y] = [int(input()), int(input())]
+x, y = int(input()), int(input())
 days = 1
 while x < y:
     x *= 1.1
