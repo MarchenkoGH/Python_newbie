@@ -14,6 +14,8 @@ elif temperature_unit == 'f':
     temperature_f = temperature
     temperature_k = (temperature_f + 459.67) / 1.8
     temperature_c = (temperature_f - 32) / 1.8
+else:
+    print('Please insert temperature unit correctly')
 
 
 print(f'''Temperature in Celcius = {temperature_c}
