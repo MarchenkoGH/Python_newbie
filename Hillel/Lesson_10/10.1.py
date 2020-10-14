@@ -17,3 +17,15 @@ while True:
         break
     file.write(entered_data + '\n')
 file.close()
+
+
+# Option 3:
+file = open(input('Please insert name of the file you want to create: ') + '.txt', 'w')
+while True:
+    entered_data = input('Please input symbols you want to save and press Enter.'
+                         'If you press Enter two times the program will stop.\n')
+    if entered_data:
+        file.write(entered_data + '\n')
+    else:
+        break
+file.close()
