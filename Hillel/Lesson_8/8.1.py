@@ -8,7 +8,7 @@ def currency_exchange(start_date, currency_from, currency_to, amount):
     while start_date <= datetime.datetime.now():
         url = requests.get('https://api.exchangerate.host/convert',
                            params={'from': currency_from, 'to': currency_to,
-                                   'amount': args.amount, 'date': start_date})
+                                   'amount': amount, 'date': start_date})
         data = url.json()
         result.append([data['date'],
                        data['query']['from'],
