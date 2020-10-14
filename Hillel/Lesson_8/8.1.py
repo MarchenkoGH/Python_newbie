@@ -1,6 +1,7 @@
 import datetime
 import requests
 import json
+from pprint import pprint
 
 
 def currency_exchange(start_date, currency_from, currency_to, amount):
@@ -17,7 +18,7 @@ def currency_exchange(start_date, currency_from, currency_to, amount):
                        data['info']['rate'],
                        data['result']])
         start_date += datetime.timedelta(days=1)
-    return print(result)
+    return pprint(result)
 
 
 def values_validation(args):
