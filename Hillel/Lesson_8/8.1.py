@@ -17,7 +17,7 @@ def currency_exchange(start_date, currency_from, currency_to, amount):
                        data['info']['rate'],
                        data['result']])
         start_date += datetime.timedelta(days=1)
-    print(result)
+    return print(result)
 
 
 def values_validation(args):
@@ -42,7 +42,7 @@ def values_validation(args):
         if currency_to not in currency_list:
             # print('The currency code you have entered is wrong, will use "UAH" by default')
             currency_to = 'UAH'  # using 'UAH' by default
-    return currency_from, currency_to, start_date, amount
+    return currency_exchange(start_date, currency_from, currency_to, amount)
 
 
 if __name__ == '__main__':
@@ -51,7 +51,7 @@ if __name__ == '__main__':
                         help='currency code you want to convert from, default = USD')
     parser.add_argument('currency_to', type=str, default='UAH',
                         help='currency code you want to convert to, default = UAH')
-    parser.add_argument('start_date', type=str, default=datetime.datetime.now(),
+    parser.add_argument('--start_date', type=str, default=datetime.datetime.now(),
                         help='the date from we start to look for exchange, default = today')
     parser.add_argument('amount', type=float, default=100.00,
                         help='the amount we need to change, default = 100.00')
