@@ -13,7 +13,7 @@ def car_number(string):
 
 
 def get_region(region_code):
-    with open('ua_auto.csv', 'r') as file:
+    with open('ua_auto_updated.csv', 'r') as file:
         reader = csv.DictReader(file)
         for row in reader:
             if region_code in (row['Код 2004'], row['Код 2013'], row['Code 2004'], row['Code 2013']):
