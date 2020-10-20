@@ -7,19 +7,17 @@ def car_number(string):
     if full_match is None:
         print("The string you have entered isn't an Ukrainian car number")
     else:
-        region_code = (re.match(r'(?:[A-ZА-Я]{2})', string)).group(0)
-        print(region_code)
+        region_code = string[:2]
+        # print(region_code)
         return get_region(region_code)
 
 
 def get_region(region_code):
     with open('ua_auto.csv', 'r') as file:
-        dict_2004 = {line[1]: line[0] for line in csv.reader(file)}
-        # print(dict_2004)
-        print(dict_2004.get(region_code))
-        # dict_2013 = {line[2]: line[0] for line in csv.reader(file)}
-
-        # print(dict_2013)
+        reader = csv.DictReader(file)
+        for row in reader:
+            if region_code in (row['Код 2004'], row['Код 2013'], row['Code 2004'], row['Code 2013']):
+                return print(row['Регіон'])
 
 
-car_number(input('Please insert your car number: '))
+car_number(input('Please insert your car number: ').upper())
